@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Juan Antonio Sánchez Martel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #6366f1;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #6366f1;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #6366f1;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-item,
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-title {
+            font-weight: bold;
+            color: #1e293b;
+        }
+
+        .item-date {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .item-company {
+            color: #6366f1;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-description {
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-category {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .skill-category h3 {
+            color: #1e293b;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            color: #475569;
+        }
+
+        .skill-category li::before {
+            content: "▸ ";
+            color: #6366f1;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Juan Antonio Sánchez Martel</h1>
+            <div class="subtitle">Desarrollador de Aplicaciones Web</div>
+            <div class="contact">
+                📧 ja.sanchezmartel@gmail.com |
+                🔗 github.com/jasanchezmartel |
+                📍 Telde, Las Palmas, España
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>👨‍💻 Perfil Profesional</h2>
+            <p class="item-description">
+                Estudiante del Ciclo Superior de Desarrollo de Aplicaciones Web con sólidos conocimientos
+                en desarrollo frontend y backend. Mi pasión por los videojuegos me ha llevado a sumergirme
+                en el mundo del desarrollo web y la programación, siempre buscando mejorar mis conocimientos
+                y aplicar las mejores prácticas de desarrollo para alcanzar mi meta de especializarme en
+                desarrollo de videojuegos y crear mi primer videojuego.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🎓 Formación Académica</h2>
+
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Ciclo Formativo de Grado Superior - Desarrollo de Aplicaciones Web</div>
+                        <div class="item-company">IES El Rincón, Las Palmas de Gran Canaria</div>
+                    </div>
+                    <div class="item-date">2019 - Presente</div>
+                </div>
+                <div class="item-description">
+                    Formación especializada en desarrollo web, incluyendo tecnologías frontend, backend,
+                    bases de datos y despliegue de aplicaciones.
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Certificado de Superación de Pruebas - Desarrollador Web</div>
+                        <div class="item-company">IES El Rincón, Las Palmas de Gran Canaria</div>
+                    </div>
+                    <div class="item-date">2018 - 2019</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💼 Experiencia en Proyectos</h2>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Blood4Life - Aplicación Full Stack</div>
+                        <div class="item-company">Proyecto Académico Colaborativo</div>
+                    </div>
+                    <div class="item-date">2024 - 2025</div>
+                </div>
+                <div class="item-description">
+                    Plataforma completa para conectar donantes de sangre con campañas de hospitales.
+                    <br>• Desarrollo del frontend con React y diseño responsive
+                    <br>• Implementación de API REST con Spring Boot
+                    <br>• Gestión de base de datos MySQL con Hibernate
+                    <br>• Despliegue en Firebase y Railway
+                    <br>• Containerización con Docker
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">SSBBCompany - Aplicación Web</div>
+                        <div class="item-company">Proyecto del Ciclo Formativo</div>
+                    </div>
+                    <div class="item-date">2023</div>
+                </div>
+                <div class="item-description">
+                    Desarrollo de aplicación web empresarial con PHP y MySQL.
+                    <br>• Implementación de sistema de gestión completo
+                    <br>• Desarrollo de interfaz de usuario responsive
+                    <br>• Integración con base de datos relacional
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Runaterra & Universe - Proyectos Web</div>
+                        <div class="item-company">Proyectos Personales</div>
+                    </div>
+                    <div class="item-date">2022 - 2023</div>
+                </div>
+                <div class="item-description">
+                    Desarrollo de aplicaciones web modernas con React y tecnologías frontend.
+                    <br>• Implementación de componentes reutilizables
+                    <br>• Diseño responsive y accesible
+                    <br>• Animaciones y efectos visuales
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript ES6+</li>
+                        <li>TypeScript</li>
+                        <li>React</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>Spring Boot</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Bases de Datos</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>Hibernate ORM</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Herramientas</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Docker</li>
+                        <li>Postman</li>
+                        <li>Figma</li>
+                        <li>Visual Studio Code</li>
+                        <li>Antigravity</li>
+                        <li>SourceTree</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🌐 Idiomas</h2>
+            <div class="item-description">
+                <strong>Español:</strong> Nativo<br>
+                <strong>Inglés:</strong> Nivel B1
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔗 Enlaces</h2>
+            <div class="item-description">
+                <strong>Portfolio:</strong> https://jasanchezmartel.github.io<br>
+                <strong>GitHub:</strong> https://github.com/jasanchezmartel<br>
+                <strong>Email:</strong> ja.sanchezmartel@gmail.com
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
