@@ -135,3 +135,195 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
 });
 
 console.log('Portfolio de Juan Antonio Sánchez Martel cargado correctamente ✨');
+
+// ========================================
+// Sistema de Partículas en Hero
+// ========================================
+function createParticles() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+
+    const particlesContainer = document.createElement('div');
+    particlesContainer.className = 'particles';
+    particlesContainer.style.cssText = `
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+    `;
+
+    for (let i = 0; i < 30; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.cssText = `
+            position: absolute;
+            width: ${Math.random() * 4 + 2}px;
+            height: ${Math.random() * 4 + 2}px;
+            background: rgba(99, 102, 241, ${Math.random() * 0.5 + 0.2});
+            border-radius: 50%;
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+            animation-duration: ${Math.random() * 10 + 10}s;
+            animation-delay: ${Math.random() * 5}s;
+        `;
+        particlesContainer.appendChild(particle);
+    }
+
+    hero.insertBefore(particlesContainer, hero.firstChild);
+}
+
+// Crear animación de flotación para partículas
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes particleFloat {
+        0%, 100% {
+            transform: translateY(0) translateX(0);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-100vh) translateX(50px);
+            opacity: 0;
+        }
+    }
+    
+    .particle {
+        animation: particleFloat linear infinite !important;
+    }
+`;
+document.head.appendChild(style);
+createParticles();
+
+// ========================================
+// Animaciones escalonadas para tarjetas
+// ========================================
+const staggerObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0) scale(1)';
+            }, index * 100);
+            staggerObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+// Aplicar animaciones escalonadas
+document.querySelectorAll('.timeline-item').forEach((item, index) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(30px) scale(0.95)';
+    item.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+    staggerObserver.observe(item);
+});
+
+// ========================================
+// Efecto parallax suave en hero
+// ========================================
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const heroContent = document.querySelector('.hero-content');
+
+    // Solo aplicar parallax al contenido de texto, no a la imagen
+    if (heroContent && window.innerWidth > 768 && scrolled < 600) {
+        heroContent.style.transform = `translateY(${scrolled * 0.2}px)`;
+        heroContent.style.opacity = 1 - (scrolled / 700);
+    }
+});
+
+// ========================================
+// Contador animado para estadísticas (si hay)
+// ========================================
+function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16);
+
+    const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(start);
+        }
+    }, 16);
+}
+
+// ========================================
+// Mejorar transiciones de página
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = '1';
+    }, 100);
+});
+
+// ========================================
+// Modal functionality for project details
+// ========================================
+const modal = document.getElementById('projectModal');
+const modalTitle = document.getElementById('modalProjectTitle');
+const modalBody = document.getElementById('modalProjectBody');
+const closeModalBtn = document.getElementById('closeModal');
+
+// Project titles mapping
+const projectTitles = {
+    'blood4life': 'Blood4Life - Proyecto Full Stack',
+    'runaterra': 'Runaterra - Aplicación React',
+    'ssbbcompany': 'SSBBCompany - Web App'
+};
+
+// Open modal when clicking "Ver ficha completa" buttons
+document.querySelectorAll('.open-modal-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const projectId = button.getAttribute('data-project');
+        const content = document.getElementById(`modal-${projectId}`);
+
+        if (content) {
+            // Set title
+            modalTitle.textContent = projectTitles[projectId] || 'Detalle del Proyecto';
+
+            // Clone and insert content
+            modalBody.innerHTML = content.innerHTML;
+
+            // Show modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+});
+
+// Close modal
+function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+closeModalBtn.addEventListener('click', closeModal);
+
+// Close on overlay click
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+// Close on ESC key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+    }
+});

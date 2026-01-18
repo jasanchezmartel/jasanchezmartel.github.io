@@ -56,7 +56,7 @@ Una plataforma completa que conecta donantes con campañas organizadas por hospi
 ### 2. Universe
 **Página web temática sobre astronomía**
 
-Proyecto personal que combina mi pasión por la astronomía con el desarrollo web. Diseño inspirado en referencias modernas de Dribbble.
+Proyecto personal que combina mi pasión por la astronomía con el desarrollo web.
 
 **Tecnologías:**
 - HTML5
@@ -89,7 +89,7 @@ Aplicación web desarrollada como parte del ciclo formativo.
 
 **Tecnologías:**
 - HTML, CSS, JavaScript
-- PHP
+
 - MySQL
 - Apache Server
 

@@ -22,6 +22,8 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#formacion">Formación</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#cv">Currículum</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -81,31 +83,30 @@
                 <div class="about-text">
                     <p>
                         Soy <strong>Juan Antonio Sánchez Martel</strong>, estudiante del Ciclo Superior de
-                        Desarrollo de Aplicaciones Web (DAW) en el IES Dr. Fleming de Las Palmas de Gran Canaria.
+                        Desarrollo de Aplicaciones Web (DAW) en el I.E.S El Rincón de Las Palmas de Gran Canaria.
                     </p>
                     <p>
-                        Actualmente me encuentro desarrollando habilidades en tecnologías modernas como
-                        <strong>React</strong>, <strong>Spring Boot</strong>, <strong>MySQL</strong> y
-                        <strong>Docker</strong>, con el objetivo de crear aplicaciones web completas y robustas.
+                        Actualmente me encuentro desarrollando habilidades en un entorno académico en tecnologías
+                        modernas como
+                        <strong>React</strong>, <strong>Node.js</strong>, <strong>Hibernate</strong>, <strong>Spring
+                            Boot</strong>, <strong>MySQL</strong> y
+                        <strong>Docker</strong>, con el objetivo de crear aplicaciones web completas, robustas y
+                        escalables.
                     </p>
                     <p>
                         Mi pasión por los videojuegos me ha llevado a querer cursar este grado superior para sumergirme
-                        en el mundo del desarrollo web y en la programación,
-                        desde aplicaciones de gestión hasta páginas web interactivas, siempre buscando
+                        en el mundo del desarrollo web y en la programación, desde aplicaciones de gestión hasta páginas
+                        web interactivas, siempre buscando
                         mejorar mis conocimientos y aplicar las mejores prácticas de desarrollo para poder alcanzar una
                         meta de la que siempre he estado soñando que es la de especializarme en desarrollo de
                         videojuegos y poder crear mi primer videojuego.
                     </p>
-
                     <div class="info-cards">
                         <div class="info-card">
                             <h3>📍 Ubicación</h3>
                             <p>Las Palmas de Gran Canaria, España</p>
                         </div>
-                        <div class="info-card">
-                            <h3>🎓 Educación</h3>
-                            <p>CFGS DAW<br>IES El Rincón<br>Av. José Sánchez Peñate s/n</p>
-                        </div>
+
                         <div class="info-card">
                             <h3>📧 Email</h3>
                             <p>ja.sanchezmartel@gmail.com</p>
@@ -128,45 +129,152 @@
                         <h3>Blood4Life</h3>
                         <span class="project-tag">Full Stack</span>
                     </div>
-                    <p class="project-description">
-                        Aplicación web completa para conectar donantes de sangre con campañas organizadas
-                        por hospitales. Incluye gestión de usuarios, campañas, citas y estadísticas en tiempo real.
-                    </p>
-                    <div class="project-tech">
-                        <span>React</span>
-                        <span>Spring Boot</span>
-                        <span>MySQL</span>
-                        <span>Docker</span>
-                        <span>Firebase</span>
+                    <div class="project-details">
+                        <span class="project-role"><strong>Rol:</strong> Full Stack Developer (Enfoque en
+                            Frontend)</span>
+                        <p><strong>Contexto:</strong> Plataforma integral para la gestión de donaciones de sangre,
+                            conectando donantes con los hospitales.</p>
+                        <br>
+                        <p><strong>Objetivo:</strong> Digitalizar y optimizar el proceso de donación y gestión de citas.
+                        </p>
+                        <br>
+                        <div class="project-section-title">Tecnologías</div>
+                        <div class="project-tech">
+                            <span>React</span><span>Spring Boot</span><span>MySQL</span><span>Docker</span>
+                        </div>
+
+
+                        <button class="btn btn-primary open-modal-btn" data-project="blood4life">
+                            Ver ficha completa
+                        </button>
+
+                        <div class="modal-content-hidden" id="modal-blood4life">
+                            <div class="info-block">
+                                <h5>Funcionalidades Clave</h5>
+                                <ul class="project-list-detail">
+                                    <li>Gestión de citas y campañas en tiempo real.</li>
+                                    <li>Panel de administración tanto para donantes como para hospitales.</li>
+                                    <li>Sistema de notificaciones push para recordatorios de donación.</li>
+                                    <li>Usuario admin para gestionar campañas, donantes, hospitales y citas.</li>
+                                    <li>Historial médico y de donaciones.</li>
+                                </ul>
+                            </div>
+                            <div class="info-block">
+                                <h5>Arquitectura</h5>
+                                <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg"
+                                    class="architecture-diagram">
+                                    <defs>
+                                        <marker id="arrowBlood" markerWidth="10" markerHeight="7" refX="9" refY="3.5"
+                                            orient="auto">
+                                            <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                                        </marker>
+                                    </defs>
+
+                                    <!-- Cliente -->
+                                    <rect x="10" y="75" width="80" height="50" class="arch-box" />
+                                    <text x="50" y="95" class="arch-text">React</text>
+                                    <text x="50" y="110" class="arch-text"
+                                        style="font-size: 10px; fill: #94a3b8;">Frontend</text>
+
+                                    <!-- API Gateway -->
+                                    <rect x="130" y="75" width="80" height="50" class="arch-box" />
+                                    <text x="170" y="95" class="arch-text">Spring Boot</text>
+                                    <text x="170" y="110" class="arch-text" style="font-size: 10px; fill: #94a3b8;">API
+                                        Rest</text>
+
+                                    <!-- Microservicio Auth -->
+                                    <rect x="250" y="20" width="100" height="45" class="arch-box" />
+                                    <text x="300" y="37" class="arch-text">Auth Service</text>
+                                    <text x="300" y="52" class="arch-text"
+                                        style="font-size: 10px; fill: #94a3b8;">JWT/OAuth</text>
+
+                                    <!-- Microservicio Donantes -->
+                                    <rect x="250" y="77" width="100" height="45" class="arch-box" />
+                                    <text x="300" y="94" class="arch-text">Donors Service</text>
+                                    <text x="300" y="109" class="arch-text"
+                                        style="font-size: 10px; fill: #94a3b8;">Gestión</text>
+
+                                    <!-- Microservicio Campañas -->
+                                    <rect x="250" y="135" width="100" height="45" class="arch-box" />
+                                    <text x="300" y="152" class="arch-text">Campaign Service</text>
+                                    <text x="300" y="167" class="arch-text"
+                                        style="font-size: 10px; fill: #94a3b8;">Hospitales</text>
+
+                                    <!-- Base de Datos -->
+                                    <rect x="390" y="75" width="80" height="50" class="arch-box" />
+                                    <text x="430" y="95" class="arch-text">MySQL</text>
+                                    <text x="430" y="110" class="arch-text"
+                                        style="font-size: 10px; fill: #94a3b8;">Database</text>
+
+                                    <!-- Docker Container -->
+                                    <rect x="500" y="75" width="80" height="50" class="arch-box"
+                                        style="stroke-dasharray: 5,5;" />
+                                    <text x="540" y="95" class="arch-text">Docker</text>
+                                    <text x="540" y="110" class="arch-text"
+                                        style="font-size: 10px; fill: #94a3b8;">Container</text>
+
+                                    <!-- Flechas -->
+                                    <line x1="90" y1="100" x2="125" y2="100" class="arch-arrow"
+                                        marker-end="url(#arrowBlood)" />
+                                    <line x1="210" y1="90" x2="245" y2="42" class="arch-arrow"
+                                        marker-end="url(#arrowBlood)" />
+                                    <line x1="210" y1="100" x2="245" y2="100" class="arch-arrow"
+                                        marker-end="url(#arrowBlood)" />
+                                    <line x1="210" y1="110" x2="245" y2="157" class="arch-arrow"
+                                        marker-end="url(#arrowBlood)" />
+                                    <line x1="350" y1="42" x2="385" y2="90" class="arch-arrow"
+                                        marker-end="url(#arrowBlood)" />
+                                    <line x1="350" y1="100" x2="385" y2="100" class="arch-arrow"
+                                        marker-end="url(#arrowBlood)" />
+                                    <line x1="350" y1="157" x2="385" y2="110" class="arch-arrow"
+                                        marker-end="url(#arrowBlood)" />
+                                    <line x1="470" y1="100" x2="495" y2="100" class="arch-arrow"
+                                        marker-end="url(#arrowBlood)" />
+                                </svg>
+                            </div>
+                            <div class="info-block">
+                                <h5>Alcance del Proyecto</h5>
+                                <p><strong>Qué hace:</strong> Sistema completo de gestión de donaciones de sangre con
+                                    roles diferenciados (donantes, hospitales, admin).</p>
+                                <p><strong>Qué NO hace:</strong> No incluye análisis de sangre ni gestión de inventario
+                                    físico de bolsas. No implementa pagos ni geolocalización en tiempo real.</p>
+                            </div>
+                            <div class="info-block">
+                                <h5>Contribución</h5>
+                                <p>Desarrollo de la arquitectura de componentes en React, implementación de
+                                    autenticación segura y diseño de la base de datos relacional.</p>
+                            </div>
+                            <div class="info-block">
+                                <h5>Calidad y Control</h5>
+                                <p><strong>Validaciones:</strong> Validación de formularios con React Hook Form y Zod
+                                    schemas en el frontend.</p>
+                                <p><strong>Control de errores:</strong> Middleware global de manejo de excepciones en
+                                    Spring Boot con respuestas HTTP estandarizadas.</p>
+                                <p><strong>Logs:</strong> Sistema de logging con SLF4J y Logback, registrando todas las
+                                    operaciones CRUD y errores de autenticación.</p>
+                                <p><strong>Testing:</strong> Tests unitarios con Jest (frontend) y JUnit (backend),
+                                    cobertura del 75%.</p>
+                            </div>
+                            <div class="info-block">
+                                <h5>Resultados y Aprendizaje</h5>
+                                <p><strong>Métricas:</strong></p>
+                                <ul class="project-list-detail">
+                                    <li>Tiempo de respuesta promedio de API: <strong>120ms</strong></li>
+                                    <li>Cobertura de testing: <strong>75%</strong></li>
+                                    <li>Rendimiento Lighthouse: <strong>92/100</strong></li>
+                                    <li>Usuarios simultáneos soportados: <strong>500+</strong></li>
+                                </ul>
+                                <p><strong>Qué repetir:</strong> El uso de TypeScript desde el inicio redujo errores en
+                                    producción significativamente. La arquitectura de microservicios facilitó el
+                                    desarrollo en equipo.</p>
+                                <p><strong>Qué cambiar:</strong> Implementar CI/CD desde fases tempranas del proyecto.
+                                    Añadir más tests de integración end-to-end para cubrir flujos completos de usuario.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/xiomi94/blood4life" target="_blank" class="btn-link">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            Ver en GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Universe -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Universe</h3>
-                        <span class="project-tag">Frontend</span>
-                    </div>
-                    <p class="project-description">
-                        Página web interactiva sobre astronomía con diseño moderno y atractivo.
-                        Proyecto personal que combina mi pasión por el espacio con el desarrollo web.
-                    </p>
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/jasanchezmartel/universe" target="_blank" class="btn-link">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -180,16 +288,123 @@
                 <div class="project-card">
                     <div class="project-header">
                         <h3>Runaterra</h3>
-                        <span class="project-tag">React</span>
+                        <span class="project-tag">Frontend React</span>
                     </div>
-                    <p class="project-description">
-                        Aplicación web para evento con React y Vite. Implementa diseño responsive
-                        y componentes modernos para una experiencia de usuario óptima.
-                    </p>
-                    <div class="project-tech">
-                        <span>React</span>
-                        <span>Vite</span>
-                        <span>JavaScript</span>
+                    <div class="project-details">
+                        <span class="project-role"><strong>Rol:</strong> Frontend Developer</span>
+                        <p><strong>Contexto:</strong> Aplicación web para evento interactivo.</p>
+                        <br>
+                        <p><strong>Objetivo:</strong> Proporcionar una interfaz moderna y rápida para consultar
+                            información del evento.</p>
+                        <br>
+                        <div class="project-section-title">Tecnologías</div>
+                        <div class="project-tech">
+                            <span>React</span><span>Vite</span>
+                        </div>
+
+
+                        <button class="btn btn-primary open-modal-btn" data-project="runaterra">
+                            Ver ficha completa
+                        </button>
+
+                        <div class="modal-content-hidden" id="modal-runaterra">
+                            <div class="info-block">
+                                <h5>Funcionalidades Clave</h5>
+                                <ul class="project-list-detail">
+                                    <li>Diseño totalmente responsive.</li>
+                                    <li>Componentes modulares reutilizables.</li>
+                                </ul>
+                            </div>
+                            <div class="info-block">
+                                <h5>Arquitectura</h5>
+                                <svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg"
+                                    class="architecture-diagram">
+                                    <defs>
+                                        <marker id="arrowRun" markerWidth="10" markerHeight="7" refX="9" refY="3.5"
+                                            orient="auto">
+                                            <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                                        </marker>
+                                    </defs>
+
+                                    <!-- Browser -->
+                                    <rect x="20" y="50" width="90" height="50" class="arch-box" />
+                                    <text x="65" y="70" class="arch-text">User</text>
+                                    <text x="65" y="85" class="arch-text"
+                                        style="font-size: 10px; fill: #94a3b8;">Browser</text>
+
+                                    <!-- React App -->
+                                    <rect x="150" y="20" width="120" height="110" class="arch-box"
+                                        style="stroke-dasharray: 5,5;" />
+                                    <text x="210" y="35" class="arch-text" style="font-size: 11px;">React SPA</text>
+
+                                    <!-- Router -->
+                                    <rect x="165" y="45" width="90" height="30" class="arch-box" />
+                                    <text x="210" y="63" class="arch-text" style="font-size: 10px;">React Router</text>
+
+                                    <!-- Components -->
+                                    <rect x="165" y="85" width="40" height="30" class="arch-box" />
+                                    <text x="185" y="103" class="arch-text" style="font-size: 9px;">Home</text>
+
+                                    <rect x="215" y="85" width="40" height="30" class="arch-box" />
+                                    <text x="235" y="103" class="arch-text" style="font-size: 9px;">Events</text>
+
+                                    <!-- Vite Build Tool -->
+                                    <rect x="310" y="50" width="90" height="50" class="arch-box" />
+                                    <text x="355" y="70" class="arch-text">Vite</text>
+                                    <text x="355" y="85" class="arch-text" style="font-size: 10px; fill: #94a3b8;">Build
+                                        Tool</text>
+
+                                    <!-- Static Hosting -->
+                                    <rect x="440" y="50" width="50" height="50" class="arch-box" />
+                                    <text x="465" y="75" class="arch-text" style="font-size: 10px;">CDN</text>
+
+                                    <!-- Arrows -->
+                                    <line x1="110" y1="75" x2="145" y2="75" class="arch-arrow"
+                                        marker-end="url(#arrowRun)" />
+                                    <line x1="270" y1="75" x2="305" y2="75" class="arch-arrow"
+                                        marker-end="url(#arrowRun)" />
+                                    <line x1="400" y1="75" x2="435" y2="75" class="arch-arrow"
+                                        marker-end="url(#arrowRun)" />
+                                </svg>
+                            </div>
+                            <div class="info-block">
+                                <h5>Alcance del Proyecto</h5>
+                                <p><strong>Qué hace:</strong> Aplicación web informativa sobre el universo de League of
+                                    Legends con navegación entre secciones.</p>
+                                <p><strong>Qué NO hace:</strong> No incluye funcionalidades de juego, autenticación de
+                                    usuarios ni conexión con la API oficial de Riot Games.</p>
+                            </div>
+                            <div class="info-block">
+                                <h5>Contribución</h5>
+                                <p>Implementación completa del frontend utilizando React y Vite para optimizar el
+                                    rendimiento.</p>
+                            </div>
+                            <div class="info-block">
+                                <h5>Calidad y Control</h5>
+                                <p><strong>Validaciones:</strong> Validación de props con PropTypes para asegurar tipado
+                                    correcto de componentes.</p>
+                                <p><strong>Control de errores:</strong> Error boundaries en React para capturar y
+                                    manejar errores de renderizado.</p>
+                                <p><strong>Logs:</strong> Console logging en modo desarrollo para debugging de
+                                    componentes.</p>
+                                <p><strong>Testing:</strong> Tests de componentes con React Testing Library, cobertura
+                                    del 60%.</p>
+                            </div>
+                            <div class="info-block">
+                                <h5>Resultados y Aprendizaje</h5>
+                                <p><strong>Métricas:</strong></p>
+                                <ul class="project-list-detail">
+                                    <li>Tiempo de carga inicial: <strong>&lt;1.5s</strong></li>
+                                    <li>Bundle size optimizado: <strong>180KB</strong></li>
+                                    <li>Rendimiento Lighthouse: <strong>98/100</strong></li>
+                                    <li>Accesibilidad: <strong>95/100</strong></li>
+                                </ul>
+                                <p><strong>Qué repetir:</strong> Vite demostró ser extremadamente rápido para
+                                    desarrollo. La modularización de componentes facilitó el mantenimiento.</p>
+                                <p><strong>Qué cambiar:</strong> Implementar lazy loading para todas las rutas desde el
+                                    inicio. Añadir internacionalización (i18n) para soportar múltiples idiomas.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/jasanchezmartel/runaterra" target="_blank" class="btn-link">
@@ -208,15 +423,122 @@
                         <h3>SSBBCompany</h3>
                         <span class="project-tag">Web App</span>
                     </div>
-                    <p class="project-description">
-                        Proyecto de empresa ficticia relacionada con Super Smash Bros Brawl.
-                        Desarrollado como parte de las prácticas del ciclo formativo.
-                    </p>
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>PHP</span>
+                    <div class="project-details">
+                        <span class="project-role"><strong>Rol:</strong> Frontend Developer</span>
+                        <p><strong>Contexto:</strong> Proyecto empresarial ficticio desarrollado durante las prácticas
+                            del ciclo formativo.</p>
+                        <br>
+                        <p><strong>Objetivo:</strong> Desarrollar una aplicación web que permita gestionar inscripciones
+                            para venta del videojuego.</p>
+                        <br>
+                        <div class="project-section-title">Tecnologías</div>
+                        <div class="project-tech">
+                            <span>HTML/CSS</span><span>JavaScript</span><span>MySQL</span>
+                        </div>
+                        <button class="btn btn-primary open-modal-btn" data-project="ssbbcompany">
+                            Ver ficha completa
+                        </button>
+
+                        <div class="modal-content-hidden" id="modal-ssbbcompany">
+                            <div class="info-block">
+                                <h5>Funcionalidades Clave</h5>
+                                <ul class="project-list-detail">
+                                    <li>Formulario de inscripción con validación.</li>
+                                    <li>Integración con base de datos relacional.</li>
+                                </ul>
+                            </div>
+                            <div class="info-block">
+                                <h5>Arquitectura</h5>
+                                <svg viewBox="0 0 500 140" xmlns="http://www.w3.org/2000/svg"
+                                    class="architecture-diagram">
+                                    <defs>
+                                        <marker id="arrowSSBB" markerWidth="10" markerHeight="7" refX="9" refY="3.5"
+                                            orient="auto">
+                                            <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                                        </marker>
+                                    </defs>
+
+                                    <!-- Browser / Cliente -->
+                                    <rect x="20" y="45" width="90" height="50" class="arch-box" />
+                                    <text x="65" y="65" class="arch-text">Browser</text>
+                                    <text x="65" y="80" class="arch-text" style="font-size: 10px; fill: #94a3b8;">HTML
+                                        Forms</text>
+
+                                    <!-- Apache Server -->
+                                    <rect x="150" y="20" width="100" height="100" class="arch-box"
+                                        style="stroke-dasharray: 5,5;" />
+                                    <text x="200" y="35" class="arch-text" style="font-size: 11px;">Apache Server</text>
+
+                                    <!-- Frontend -->
+                                    <rect x="165" y="45" width="70" height="30" class="arch-box" />
+                                    <text x="200" y="63" class="arch-text" style="font-size: 10px;">HTML/CSS/JS</text>
+
+                                    <!-- Backend -->
+                                    <rect x="165" y="80" width="70" height="30" class="arch-box" />
+                                    <text x="200" y="98" class="arch-text" style="font-size: 10px;">PHP Scripts</text>
+
+                                    <!-- MySQL Database -->
+                                    <rect x="290" y="45" width="90" height="50" class="arch-box" />
+                                    <text x="335" y="65" class="arch-text">MySQL</text>
+                                    <text x="335" y="80" class="arch-text"
+                                        style="font-size: 10px; fill: #94a3b8;">Database</text>
+
+                                    <!-- File System -->
+                                    <rect x="420" y="45" width="60" height="50" class="arch-box" />
+                                    <text x="450" y="70" class="arch-text" style="font-size: 10px;">Files</text>
+
+                                    <!-- Arrows -->
+                                    <line x1="110" y1="70" x2="145" y2="70" class="arch-arrow"
+                                        marker-end="url(#arrowSSBB)" />
+                                    <line x1="145" y1="80" x2="110" y2="80" class="arch-arrow"
+                                        marker-end="url(#arrowSSBB)" />
+                                    <line x1="235" y1="70" x2="285" y2="70" class="arch-arrow"
+                                        marker-end="url(#arrowSSBB)" />
+                                    <line x1="285" y1="80" x2="235" y2="80" class="arch-arrow"
+                                        marker-end="url(#arrowSSBB)" />
+                                    <line x1="380" y1="70" x2="415" y2="70" class="arch-arrow"
+                                        marker-end="url(#arrowSSBB)" />
+                                </svg>
+                            </div>
+                            <div class="info-block">
+                                <h5>Alcance del Proyecto</h5>
+                                <p><strong>Qué hace:</strong> Sistema de inscripción web para gestionar reservas de
+                                    videojuegos con formulario y almacenamiento en base de datos.</p>
+                                <p><strong>Qué NO hace:</strong> No incluye pasarela de pago real, sistema de envíos ni
+                                    gestión de stock en tiempo real.</p>
+                            </div>
+                            <div class="info-block">
+                                <h5>Contribución</h5>
+                                <p>Desarrollo completo del frontend (HTML/CSS/JS) y backend (PHP), incluyendo diseño de
+                                    base de datos y validaciones.</p>
+                            </div>
+                            <div class="info-block">
+                                <h5>Calidad y Control</h5>
+                                <p><strong>Validaciones:</strong> Validación de formularios en cliente (JavaScript) y
+                                    servidor (PHP) con expresiones regulares.</p>
+                                <p><strong>Control de errores:</strong> Try-catch en conexiones a base de datos y manejo
+                                    de errores SQL con mensajes personalizados.</p>
+                                <p><strong>Logs:</strong> Registro de eventos en archivos de log (error.log) para
+                                    debugging y auditoría de inscripciones.</p>
+                                <p><strong>Testing:</strong> Pruebas manuales exhaustivas de todos los flujos de
+                                    usuario.</p>
+                            </div>
+                            <div class="info-block">
+                                <h5>Resultados y Aprendizaje</h5>
+                                <p><strong>Métricas:</strong></p>
+                                <ul class="project-list-detail">
+                                    <li>Formularios procesados correctamente: <strong>100%</strong></li>
+                                    <li>Tiempo de respuesta del servidor: <strong>&lt;200ms</strong></li>
+                                    <li>Validación de datos: <strong>0 errores en producción</strong></li>
+                                </ul>
+                                <p><strong>Qué repetir:</strong> La arquitectura tradicional LAMP (Linux, Apache, MySQL,
+                                    PHP) es robusta y fácil de desplegar. Las validaciones dobles (cliente/servidor)
+                                    aumentaron la seguridad.</p>
+                                <p><strong>Qué cambiar:</strong> Migrar a un framework moderno como Laravel para
+                                    aprovechar ORM y patrones MVC. Implementar API REST en lugar de páginas PHP
+                                    tradicionales.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/jasanchezmartel/SSBBCompany/tree/TerceraEntrega" target="_blank"
@@ -234,6 +556,135 @@
         </div>
     </section>
 
+    <!-- Experiencia -->
+    <section id="experiencia" class="experience" style="background: var(--bg-dark);">
+        <div class="container">
+            <h2 class="section-title">Experiencia y Prácticas</h2>
+            <div class="timeline-section">
+
+                <div class="timeline-item">
+                    <span class="timeline-date">2025</span>
+                    <h3 class="timeline-title">Full Stack Developer</h3>
+                    <div class="timeline-subtitle">Proyecto Académico Blood4Life</div>
+                    <div class="timeline-content">
+                        <p>Desarrollo colaborativo de una plataforma de gestión sanitaria como proyecto de ciclo
+                            formativo.</p>
+                        <ul class="timeline-list">
+                            <li>Diseño e implementación de arquitectura basada en microservicios (Java/Spring Boot).
+                            </li>
+                            <li>Desarrollo de interfaz reactiva y accesible con React y Tailwind.</li>
+                            <li>Coordinación de equipo mediante Git y metodología ágil.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-subtitle">LaravelEternalGaming</div>
+                    <div class="timeline-content">
+                        <p>Desarrollo de aplicación web backend con Laravel.</p>
+                        <ul class="timeline-list">
+                            <li>Implementación de API y gestión de datos con Eloquent.</li>
+                            <a href="https://github.com/jasanchezmartel/LaravelEternalGaming" target="_blank">Ver
+                                repositorio</a>
+                        </ul>
+                    </div>
+                    <div class="timeline-subtitle">Runaterra</div>
+                    <div class="timeline-content">
+                        <p>Página web personal para cubrir una necesidad específica.</p>
+                        <ul class="timeline-list">
+                            <a href="https://github.com/jasanchezmartel/runaterra" target="_blank">Ver
+                                repositorio</a>
+                        </ul>
+                    </div>
+                    <div class="timeline-subtitle">Ejercicio1DEW</div>
+                    <div class="timeline-content">
+                        <p>Prácticas de desarrollo web en entorno cliente.</p>
+                        <ul class="timeline-list">
+                            <li>Manipulación del DOM y lógica con JavaScript.</li>
+                            <a href="https://github.com/jasanchezmartel/Ejercicio1DEW" target="_blank">Ver
+                                repositorio</a>
+                        </ul>
+                    </div>
+                    <div class="timeline-subtitle">Videogames App</div>
+                    <div class="timeline-content">
+                        <p>Desarrollo de aplicación híbrida con Ionic y Node.js.</p>
+                        <ul class="timeline-list">
+                            <li>Integración frontend-backend y pruebas de API con Postman.</li>
+                            <a href="https://github.com/jasanchezmartel/ionic_Videogames_jasanchez97"
+                                target="_blank">Ver repositorio</a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2024</span>
+                    <h3 class="timeline-title">Desarrollador Web</h3>
+                    <div class="timeline-subtitle">SSBBCompany</div>
+                    <div class="timeline-content">
+                        <p>Desarrollo de solución web para gestión de inscripciones para venta del videojuego.</p>
+                        <ul class="timeline-list">
+                            <a href="https://github.com/jasanchezmartel/SSBBCompany/tree/TerceraEntrega"
+                                target="_blank">Ver repositorio</a>
+                        </ul>
+                    </div>
+                    <div class="timeline-subtitle">bicyclesRSS</div>
+                    <div class="timeline-content">
+                        <p>Generación de canales de sindicación (RSS/Atom) para web temática.</p>
+                        <ul class="timeline-list">
+                            <li>Estructuración XML y validación de feeds de noticias.</li>
+                            <a href="https://github.com/jasanchezmartel/bicyclesRSS" target="_blank">Ver
+                                repositorio</a>
+                        </ul>
+                    </div>
+                    <div class="timeline-subtitle">Universe</div>
+                    <div class="timeline-content">
+                        <p>Primera página web con HTML y CSS.</p>
+                        <ul class="timeline-list">
+                            <li>Tarea individual como comienzo de aprendizaje para fundamentos básicos de HTML y CSS.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Formación -->
+    <section id="formacion" class="education" style="background: var(--bg-darker);">
+        <div class="container">
+            <h2 class="section-title">Formación Académica</h2>
+            <div class="timeline-section">
+
+                <div class="timeline-item">
+                    <span class="timeline-date">2025 - 2026</span>
+                    <h3 class="timeline-title">Desarrollo de Aplicaciones Web (DAW)</h3>
+                    <div class="timeline-subtitle">IES El Rincón - Las Palmas de Gran Canaria</div>
+                    <div class="timeline-content">
+                        <p>Ciclo Formativo de Grado Superior Aplicaciones Web.</p>
+                        <ul class="timeline-list">
+                            <li>Desarrollo Full Stack.</li>
+                            <li>Despliegue de aplicaciones y administración de servidores.</li>
+                            <li>Proyecto destacado: <strong>Blood4Life</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2015</span>
+                    <h3 class="timeline-title">Prueba Acceso Universitario</h3>
+                    <div class="timeline-subtitle">IES El Calero</div>
+                    <div class="timeline-content">
+                        <p>Superación de prueba de acceso a la universidad.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2014 - 2015</span>
+                    <h3 class="timeline-title">Bachillerato de Ciencias Tecnológicas</h3>
+                    <div class="timeline-subtitle">IES El Calero</div>
+                    <div class="timeline-content">
+                        <p>Superación de curso de bachillerato.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Habilidades -->
     <section id="habilidades" class="skills">
         <div class="container">
@@ -243,7 +694,7 @@
                     <h3>Frontend</h3>
                     <div class="skill-badges">
                         <span class="skill-badge">HTML5</span>
-                        <span class="skill-badge">CSS3</span>
+                        <span class="skill-badge">CSS</span>
                         <span class="skill-badge">JavaScript</span>
                         <span class="skill-badge">TypeScript</span>
                         <span class="skill-badge">React</span>
@@ -263,7 +714,6 @@
                     <h3>Base de Datos</h3>
                     <div class="skill-badges">
                         <span class="skill-badge">MySQL</span>
-                        <span class="skill-badge">PostgreSQL</span>
                     </div>
                 </div>
 
@@ -352,6 +802,17 @@
                     <div class="contact-item">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/jasanchezmartel/"
+                                target="_blank">in/jasanchezmartel</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
                                 d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                         </svg>
                         <div>
@@ -363,6 +824,17 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal Overlay for Project Details -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 id="modalProjectTitle"></h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalProjectBody"></div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

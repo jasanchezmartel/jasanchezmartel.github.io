@@ -75,6 +75,63 @@ Edita `css/style.css`:
 #### Agregar más proyectos
 En `index.html`, busca la sección `<div class="projects-grid">` y agrega nuevas tarjetas de proyecto siguiendo el mismo formato.
 
+## 📊 Criterios de Evaluación Detallados (Parte 2)
+
+Estos son los criterios específicos extraídos de la documentación oficial que debes cumplir:
+
+### 1. Proyectos (Portfolio) — "La sección que decide entrevistas"
+**Objetivo:** Mostrar capacidad real. Mínimo 3 proyectos (o 2 proyectos + 1 caso de prácticas).
+
+Cada proyecto debe tener una ficha estándar obligatoria:
+- **Título + Rol** (ej.: "App de tickets IT — rol: backend")
+- **Contexto** (problema real o simulado, para quién, por qué)
+- **Objetivo y Alcance** (qué hace y qué no hace)
+- **Tecnologías** (lista concreta)
+- **Arquitectura / Diseño** (diagrama simple o explicación clara)
+- **Funcionalidades Clave**
+- **Tu contribución exacta** (qué hiciste tú, qué hizo el equipo)
+- **Evidencias:** Enlace a repositorio (GitHub) o Drive, capturas / demo, documentación.
+- **Calidad:** Pruebas, validaciones, logs, control de errores.
+- **Resultados y Aprendizaje:** Qué mejoró, métricas, qué repetirías/cambiarías.
+- **Exigencia Máxima:** README profesional en GitHub (instalación, uso, endpoints, etc.).
+
+### 2. Experiencia / Prácticas — "Impacto, no tareas"
+**Objetivo:** Que se vea tu aportación.
+- **Datos:** Empresa/centro, fechas, rol, área.
+- **Bullets (4-6):** Acción + Herramienta + Resultado (formato impacto).
+- **Herramientas reales usadas.**
+- **Lecciones aprendidas:** 3 bullets.
+- *Prohibido: listas de tareas genéricas sin resultados.*
+
+### 3. Formación y Certificaciones
+- Titulación, centro, fechas, módulos relevantes.
+- Proyectos destacados vinculados.
+- Certificaciones (o "En preparación" con fecha).
+- Cursos relevantes (solo si aportan valor).
+
+### 4. CV y Documentos
+- CV en PDF (ATS-friendly, 1 página ideal).
+- Carta de presentación breve (opcional).
+- **Exigencia:** El CV debe estar alineado con la web (sin contradicciones).
+
+### 5. Contacto
+- Email profesional, LinkedIn, GitHub.
+- Ciudad y disponibilidad.
+- **Exigencia:** Enlaces probados y funcionales.
+
+### 📌 Elementos Transversales Obligatorios
+- **A) Enlaces verificables:** No puede haber enlaces rotos; repositorios públicos.
+- **B) Evidencia y trazabilidad:** Cada habilidad debe apuntar a un proyecto/experiencia.
+- **C) Profesionalidad documental:** Ortografía impecable, nombres técnicos correctos (ej. "PostgreSQL", no "Postgress").
+- **D) Ética y privacidad:** No publicar datos sensibles; anonimizar capturas.
+
+### ✅ Requisitos Mínimos para APTO
+- Estructura completa con las 8 secciones.
+- 3 proyectos con ficha completa.
+- CV PDF descargable y coherente.
+- LinkedIn y GitHub enlazados y actualizados.
+- Cero errores ortográficos y cero enlaces rotos.
+
 ## 📋 Checklist antes de publicar
 
 - [ ] Tu CV en PDF está en la carpeta `assets/`
